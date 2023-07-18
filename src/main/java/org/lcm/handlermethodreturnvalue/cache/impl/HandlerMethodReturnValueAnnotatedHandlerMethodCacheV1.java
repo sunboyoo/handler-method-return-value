@@ -36,7 +36,7 @@ public class HandlerMethodReturnValueAnnotatedHandlerMethodCacheV1 implements Ha
     private static final Logger logger = LoggerFactory.getLogger(HandlerMethodReturnValueAnnotatedHandlerMethodCacheV1.class);
 
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() throws Exception{
         Map<String, Object> controllers = this.applicationContext.getBeansWithAnnotation(Controller.class);
 
         controllers.forEach((key, controller) -> {

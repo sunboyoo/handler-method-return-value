@@ -39,7 +39,7 @@ public class HandlerMethodReturnValueAnnotatedHandlerMethodCacheV4 implements Ha
     }
 
     @Override
-    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+    public Object postProcessAfterInitialization(Object bean,String beanName) throws BeansException {
         Class<?> type = bean.getClass();
         // 判断是否为 Controller 类
         if (type.isAnnotationPresent(Controller.class) || type.isAnnotationPresent(RestController.class)) {

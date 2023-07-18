@@ -16,15 +16,15 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 import org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor;
 
 /**
-    简单代理模式 - 或者包装模式
-    使用自定义的 HandlerMethodReturnValueHandler 代理 RequestResponseBodyMethodProcessor
-    它们都实现了同样的接口 HandlerMethodReturnValueHandler
-    https://mp.weixin.qq.com/s/8aMz07rOF5LuclnBaI_p5g
+ 简单代理模式 - 或者包装模式
+ 使用自定义的 HandlerMethodReturnValueHandler 代理 RequestResponseBodyMethodProcessor
+ 它们都实现了同样的接口 HandlerMethodReturnValueHandler
+ <a href="https://mp.weixin.qq.com/s/8aMz07rOF5LuclnBaI_p5g">...</a>
 
-    RequestResponseBodyHandlerMethodReturnValueHandler 是被 RequestResponseBodyHandlerMethodReturnValueHandlerConfig
-    创建一个对象，并加入到 HandlerMethodReturnValueHandler List 中的。
-    RequestResponseBodyHandlerMethodReturnValueHandler 并不是@Bean等方式被加入到容器中的。
-* */
+ RequestResponseBodyHandlerMethodReturnValueHandler 是被 RequestResponseBodyHandlerMethodReturnValueHandlerConfig
+ 创建一个对象，并加入到 HandlerMethodReturnValueHandler List 中的。
+ RequestResponseBodyHandlerMethodReturnValueHandler 并不是@Bean等方式被加入到容器中的。
+ * */
 public class HandlerMethodReturnValueAnnotatedHandler implements HandlerMethodReturnValueHandler {
     // 被代理的对象 -
     // 这是 HandlerMethodReturnValueHandler 的实现类之一，这个主要用来处理返回 JSON 的情况。

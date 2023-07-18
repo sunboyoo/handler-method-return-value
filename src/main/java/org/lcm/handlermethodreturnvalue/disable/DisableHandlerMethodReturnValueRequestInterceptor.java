@@ -2,7 +2,6 @@ package org.lcm.handlermethodreturnvalue.disable;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * Spring Cloud OpenFeign 的 RequestInterceptor

@@ -6,10 +6,13 @@ import lombok.NoArgsConstructor;
 import org.lcm.handlermethodreturnvalue.model.ReturnValue;
 import org.springframework.data.domain.Page;
 
+import java.io.Serial;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class AntDesignProReturnValue  implements ReturnValue {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private Boolean success;

@@ -19,8 +19,7 @@ public interface DisableHandlerMethodReturnValue {
     static boolean existsInHttpRequestHeader(){
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
 
-        if (requestAttributes instanceof ServletRequestAttributes){
-            ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) requestAttributes;
+        if (requestAttributes instanceof ServletRequestAttributes servletRequestAttributes){
             HttpServletRequest request = servletRequestAttributes.getRequest();
             return request.getHeader(HEADER_NAME) != null;
         }
